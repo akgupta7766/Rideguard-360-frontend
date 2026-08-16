@@ -1,0 +1,861 @@
+/* ==========================================
+   ROUTES PAGE
+========================================== */
+
+.routes-page {
+  min-height: 100vh;
+  background: #f5f7fb;
+  color: #172033;
+  padding: 30px;
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.routes-header {
+  max-width: 1200px;
+  margin: 0 auto 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.routes-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.route-back-button {
+  width: 40px;
+  height: 40px;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+
+  background: #ffffff;
+  color: #374151;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+.route-back-button:hover {
+  background: #f3f4f6;
+}
+
+.routes-title-icon {
+  width: 48px;
+  height: 48px;
+
+  border-radius: 13px;
+
+  background: #eff6ff;
+  color: #2563eb;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.route-eyebrow,
+.stops-eyebrow {
+  display: block;
+
+  color: #2563eb;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+
+  margin-bottom: 4px;
+}
+
+.routes-title h1 {
+  margin: 0;
+
+  font-size: 27px;
+  line-height: 1.2;
+}
+
+.routes-title p {
+  margin: 5px 0 0;
+
+  color: #6b7280;
+  font-size: 13px;
+}
+
+
+/* ==========================================
+   ADD ROUTE
+========================================== */
+
+.add-route-button,
+.add-stop-button,
+.route-save-button {
+  border: none;
+
+  background: #2563eb;
+  color: #ffffff;
+
+  padding: 11px 16px;
+
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.add-route-button:hover,
+.add-stop-button:hover,
+.route-save-button:hover {
+  background: #1d4ed8;
+}
+
+
+/* ==========================================
+   ERROR
+========================================== */
+
+.routes-error {
+  max-width: 1200px;
+  margin: 0 auto 18px;
+
+  padding: 11px 14px;
+
+  border: 1px solid #fecaca;
+  border-radius: 10px;
+
+  background: #fef2f2;
+  color: #b91c1c;
+
+  font-size: 13px;
+}
+
+
+/* ==========================================
+   COMMON CARDS
+========================================== */
+
+.route-form-card,
+.routes-list-card,
+.stops-card {
+  max-width: 1200px;
+
+  margin: 0 auto 20px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 17px;
+
+  padding: 24px;
+
+  box-sizing: border-box;
+}
+
+
+/* ==========================================
+   FORM HEADINGS
+========================================== */
+
+.route-form-heading,
+.stop-form-heading,
+.stops-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 15px;
+}
+
+.route-form-heading h2,
+.stop-form-heading h3 {
+  margin: 0;
+
+  font-size: 19px;
+}
+
+.stops-heading {
+  margin-bottom: 20px;
+}
+
+.stops-heading h2 {
+  margin: 4px 0 0;
+
+  font-size: 19px;
+}
+
+.stops-heading p {
+  margin: 5px 0 0;
+
+  color: #6b7280;
+
+  font-size: 12px;
+}
+
+
+/* ==========================================
+   CLOSE BUTTON
+========================================== */
+
+.close-form-button {
+  width: 36px;
+  height: 36px;
+
+  flex-shrink: 0;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 9px;
+
+  background: #ffffff;
+  color: #6b7280;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+.close-form-button:hover {
+  background: #f3f4f6;
+}
+
+
+/* ==========================================
+   ROUTE FORM
+========================================== */
+
+.route-form {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 17px;
+
+  margin-top: 20px;
+}
+
+.route-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.route-field label,
+.stop-field label {
+  color: #374151;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.route-field input,
+.stop-field input {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 11px 12px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 9px;
+
+  background: #ffffff;
+  color: #111827;
+
+  font-family: inherit;
+  font-size: 13px;
+
+  outline: none;
+}
+
+.route-field input:focus,
+.stop-field input:focus {
+  border-color: #2563eb;
+
+  box-shadow:
+    0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+
+/* ==========================================
+   FORM ACTIONS
+========================================== */
+
+.route-form-actions,
+.stop-form-actions {
+  grid-column: 1 / -1;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 10px;
+
+  padding-top: 3px;
+}
+
+.route-cancel-button {
+  padding: 10px 16px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 9px;
+
+  background: #ffffff;
+  color: #374151;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.route-cancel-button:hover {
+  background: #f3f4f6;
+}
+
+
+/* ==========================================
+   ROUTES SECTION
+========================================== */
+
+.routes-section-heading {
+  margin-bottom: 18px;
+}
+
+.routes-section-heading h2 {
+  margin: 0;
+
+  font-size: 18px;
+}
+
+.routes-section-heading p {
+  margin: 5px 0 0;
+
+  color: #6b7280;
+
+  font-size: 12px;
+}
+
+
+/* ==========================================
+   ROUTES GRID
+========================================== */
+
+.routes-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fill, minmax(230px, 1fr));
+
+  gap: 16px;
+}
+
+
+/* ==========================================
+   ROUTE CARD
+========================================== */
+
+.route-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 13px;
+
+  padding: 18px;
+
+  background: #ffffff;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.route-card:hover {
+  border-color: #93c5fd;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 25px rgba(15, 23, 42, 0.06);
+}
+
+.route-card.selected {
+  border-color: #2563eb;
+
+  box-shadow:
+    0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+.route-card-top {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+.route-card-icon {
+  width: 40px;
+  height: 40px;
+
+  border-radius: 10px;
+
+  background: #eff6ff;
+  color: #2563eb;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* ==========================================
+   EDIT BUTTONS
+========================================== */
+
+.route-edit-button,
+.stop-edit-button {
+  width: 34px;
+  height: 34px;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+
+  background: #ffffff;
+  color: #2563eb;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+.route-edit-button:hover,
+.stop-edit-button:hover {
+  background: #eff6ff;
+
+  border-color: #bfdbfe;
+}
+
+
+/* ==========================================
+   ROUTE CARD TEXT
+========================================== */
+
+.route-card h3 {
+  margin: 14px 0 6px;
+
+  color: #111827;
+
+  font-size: 15px;
+}
+
+.route-card p {
+  margin: 0;
+
+  min-height: 38px;
+
+  color: #6b7280;
+
+  font-size: 12px;
+
+  line-height: 1.55;
+}
+
+.route-view-text {
+  display: block;
+
+  margin-top: 14px;
+
+  color: #2563eb;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+
+/* ==========================================
+   STOPS CARD
+========================================== */
+
+.stops-heading {
+  padding-bottom: 3px;
+}
+
+.stops-heading > div:first-child {
+  flex: 1;
+}
+
+
+/* ==========================================
+   STOP FORM
+========================================== */
+
+.stop-form-wrapper {
+  margin-bottom: 20px;
+
+  padding: 18px;
+
+  background: #f8fafc;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+}
+
+.stop-form {
+  display: grid;
+
+  grid-template-columns:
+    1.5fr 1fr 1fr 0.8fr;
+
+  gap: 14px;
+
+  margin-top: 16px;
+}
+
+.stop-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+
+/* ==========================================
+   STOPS LIST
+========================================== */
+
+.stops-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+.stop-row {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  padding: 13px;
+
+  border: 1px solid #edf0f4;
+  border-radius: 11px;
+
+  background: #ffffff;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.stop-row:hover {
+  border-color: #bfdbfe;
+
+  background: #f8fbff;
+}
+
+
+/* ==========================================
+   STOP SEQUENCE
+========================================== */
+
+.stop-sequence {
+  width: 34px;
+  height: 34px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #2563eb;
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 12px;
+  font-weight: 800;
+}
+
+
+/* ==========================================
+   STOP ICON
+========================================== */
+
+.stop-icon {
+  width: 36px;
+  height: 36px;
+
+  flex-shrink: 0;
+
+  border-radius: 9px;
+
+  background: #eff6ff;
+  color: #2563eb;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* ==========================================
+   STOP INFO
+========================================== */
+
+.stop-info {
+  flex: 1;
+
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.stop-info strong {
+  color: #111827;
+
+  font-size: 13px;
+}
+
+.stop-info span {
+  color: #6b7280;
+
+  font-size: 11px;
+
+  word-break: break-word;
+}
+
+
+/* ==========================================
+   EMPTY STATES
+========================================== */
+
+.routes-empty,
+.stops-empty {
+  min-height: 190px;
+
+  padding: 25px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  color: #9ca3af;
+
+  gap: 7px;
+}
+
+.routes-empty svg,
+.stops-empty svg {
+  color: #94a3b8;
+}
+
+.routes-empty h3,
+.stops-empty h3 {
+  margin: 7px 0 0;
+
+  color: #374151;
+
+  font-size: 15px;
+}
+
+.routes-empty p,
+.stops-empty p {
+  margin: 0;
+
+  color: #9ca3af;
+
+  font-size: 12px;
+}
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 900px) {
+
+  .routes-page {
+    padding: 22px;
+  }
+
+  .stop-form {
+    grid-template-columns:
+      1fr 1fr;
+  }
+
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 650px) {
+
+  .routes-page {
+    padding: 15px;
+  }
+
+  .routes-header {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 16px;
+  }
+
+  .routes-title {
+    align-items: flex-start;
+  }
+
+  .routes-title-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .routes-title h1 {
+    font-size: 23px;
+  }
+
+  .add-route-button {
+    width: 100%;
+  }
+
+  .route-form-card,
+  .routes-list-card,
+  .stops-card {
+    padding: 17px;
+  }
+
+  .route-form {
+    grid-template-columns: 1fr;
+  }
+
+  .route-form-actions {
+    grid-column: auto;
+
+    flex-direction: column-reverse;
+
+    align-items: stretch;
+  }
+
+  .route-cancel-button,
+  .route-save-button {
+    width: 100%;
+  }
+
+  .routes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stops-heading {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .add-stop-button {
+    width: 100%;
+  }
+
+  .stop-form {
+    grid-template-columns: 1fr;
+  }
+
+  .stop-form-actions {
+    grid-column: auto;
+
+    flex-direction: column-reverse;
+
+    align-items: stretch;
+  }
+
+  .stop-form-actions .route-cancel-button,
+  .stop-form-actions .route-save-button {
+    width: 100%;
+  }
+
+  .stop-row {
+    align-items: flex-start;
+
+    flex-wrap: wrap;
+  }
+
+  .stop-info {
+    width: calc(100% - 100px);
+
+    flex: none;
+  }
+
+  .stop-edit-button {
+    margin-left: auto;
+  }
+
+}
+
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 420px) {
+
+  .route-back-button {
+    width: 36px;
+    height: 36px;
+  }
+
+  .routes-title-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .routes-title h1 {
+    font-size: 21px;
+  }
+
+  .route-card {
+    padding: 15px;
+  }
+
+  .stop-row {
+    gap: 9px;
+  }
+
+  .stop-info {
+    width: calc(100% - 90px);
+  }
+
+}

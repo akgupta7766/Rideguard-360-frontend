@@ -1,0 +1,902 @@
+/* ==========================================
+   EMERGENCIES PAGE
+========================================== */
+
+.emergencies-page {
+  min-height: 100vh;
+  background: #f5f7fb;
+  color: #172033;
+  padding: 30px;
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.emergencies-header {
+  max-width: 1200px;
+  margin: 0 auto 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+
+.emergencies-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+
+.emergency-back-button {
+  width: 40px;
+  height: 40px;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+
+  background: #ffffff;
+  color: #374151;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+
+.emergency-back-button:hover {
+  background: #f3f4f6;
+}
+
+
+.emergency-title-icon {
+  width: 48px;
+  height: 48px;
+
+  border-radius: 13px;
+
+  background: #fef2f2;
+  color: #dc2626;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.emergency-eyebrow {
+  display: block;
+
+  color: #dc2626;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+
+  margin-bottom: 4px;
+}
+
+
+.emergencies-title h1 {
+  margin: 0;
+
+  font-size: 27px;
+  line-height: 1.2;
+}
+
+
+.emergencies-title p {
+  margin: 5px 0 0;
+
+  color: #6b7280;
+  font-size: 13px;
+}
+
+
+/* ==========================================
+   HEADER ACTIONS
+========================================== */
+
+.emergency-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.refresh-emergency-button,
+.create-emergency-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  border-radius: 10px;
+
+  padding: 10px 14px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+
+.refresh-emergency-button {
+  border: 1px solid #d1d5db;
+
+  background: #ffffff;
+  color: #374151;
+}
+
+
+.refresh-emergency-button:hover {
+  background: #f3f4f6;
+}
+
+
+.create-emergency-button {
+  border: none;
+
+  background: #dc2626;
+  color: #ffffff;
+}
+
+
+.create-emergency-button:hover {
+  background: #b91c1c;
+}
+
+
+.refresh-emergency-button:disabled,
+.create-emergency-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+.refresh-spin {
+  animation: emergency-spin 0.8s linear infinite;
+}
+
+
+@keyframes emergency-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* ==========================================
+   ERROR
+========================================== */
+
+.emergency-error {
+  max-width: 1200px;
+  margin: 0 auto 18px;
+
+  min-height: 44px;
+
+  padding: 10px 13px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #fecaca;
+  border-radius: 10px;
+
+  background: #fef2f2;
+  color: #b91c1c;
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  font-size: 13px;
+}
+
+
+.emergency-error span {
+  flex: 1;
+}
+
+
+.emergency-error button {
+  width: 28px;
+  height: 28px;
+
+  border: none;
+  border-radius: 7px;
+
+  background: transparent;
+  color: #b91c1c;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+
+.emergency-error button:hover {
+  background: #fee2e2;
+}
+
+
+/* ==========================================
+   FORM CARD
+========================================== */
+
+.emergency-form-card {
+  max-width: 1200px;
+
+  margin: 0 auto 20px;
+
+  padding: 24px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 17px;
+}
+
+
+.emergency-form-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  margin-bottom: 22px;
+}
+
+
+.emergency-form-header span {
+  color: #dc2626;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 1.4px;
+}
+
+
+.emergency-form-header h2 {
+  margin: 5px 0 0;
+
+  font-size: 19px;
+}
+
+
+.emergency-form-header p {
+  margin: 5px 0 0;
+
+  color: #6b7280;
+
+  font-size: 12px;
+}
+
+
+.emergency-close {
+  width: 36px;
+  height: 36px;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 9px;
+
+  background: #ffffff;
+  color: #6b7280;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+
+.emergency-close:hover {
+  background: #f3f4f6;
+}
+
+
+/* ==========================================
+   FORM
+========================================== */
+
+.emergency-form {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 17px;
+}
+
+
+.emergency-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+
+.emergency-field.full {
+  grid-column: 1 / -1;
+}
+
+
+.emergency-field label {
+  color: #374151;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+
+.emergency-field input,
+.emergency-field textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  border: 1px solid #d1d5db;
+  border-radius: 9px;
+
+  background: #ffffff;
+  color: #111827;
+
+  padding: 11px 12px;
+
+  font-family: inherit;
+  font-size: 13px;
+
+  outline: none;
+}
+
+
+.emergency-field textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+
+.emergency-field input:focus,
+.emergency-field textarea:focus {
+  border-color: #dc2626;
+
+  box-shadow:
+    0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+
+/* ==========================================
+   FORM ACTIONS
+========================================== */
+
+.emergency-form-actions {
+  grid-column: 1 / -1;
+
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+
+  padding-top: 4px;
+}
+
+
+.emergency-cancel,
+.emergency-save {
+  border-radius: 9px;
+
+  padding: 10px 16px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+
+.emergency-cancel {
+  border: 1px solid #d1d5db;
+
+  background: #ffffff;
+  color: #374151;
+}
+
+
+.emergency-cancel:hover {
+  background: #f3f4f6;
+}
+
+
+.emergency-save {
+  border: none;
+
+  background: #dc2626;
+  color: #ffffff;
+}
+
+
+.emergency-save:hover {
+  background: #b91c1c;
+}
+
+
+.emergency-cancel:disabled,
+.emergency-save:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+/* ==========================================
+   LIST CARD
+========================================== */
+
+.emergency-list-card {
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 17px;
+
+  overflow: hidden;
+}
+
+
+/* ==========================================
+   LIST HEADING
+========================================== */
+
+.emergency-list-heading {
+  padding: 21px 24px;
+
+  border-bottom: 1px solid #e5e7eb;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+
+.emergency-list-heading > div:first-child > span {
+  color: #dc2626;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 1.3px;
+}
+
+
+.emergency-list-heading h2 {
+  margin: 5px 0 0;
+
+  font-size: 18px;
+}
+
+
+.emergency-list-heading p {
+  margin: 4px 0 0;
+
+  color: #6b7280;
+
+  font-size: 12px;
+}
+
+
+.emergency-count {
+  min-width: 80px;
+
+  padding: 8px 11px;
+
+  border-radius: 10px;
+
+  background: #fef2f2;
+  color: #dc2626;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+
+.emergency-count strong {
+  font-size: 15px;
+}
+
+
+.emergency-count span {
+  font-size: 10px;
+  font-weight: 700;
+}
+
+
+/* ==========================================
+   EMPTY STATE
+========================================== */
+
+.emergency-empty {
+  min-height: 270px;
+
+  padding: 30px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  color: #9ca3af;
+}
+
+
+.emergency-empty svg {
+  color: #16a34a;
+}
+
+
+.emergency-empty h3 {
+  margin: 12px 0 5px;
+
+  color: #374151;
+
+  font-size: 15px;
+}
+
+
+.emergency-empty p {
+  margin: 0;
+
+  color: #9ca3af;
+
+  font-size: 12px;
+}
+
+
+/* ==========================================
+   EMERGENCY LIST
+========================================== */
+
+.emergency-list {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.emergency-item {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 13px;
+
+  padding: 18px 24px;
+
+  border-bottom: 1px solid #f0f0f0;
+
+  background: #ffffff;
+}
+
+
+.emergency-item:last-child {
+  border-bottom: none;
+}
+
+
+.emergency-item:hover {
+  background: #fffafa;
+}
+
+
+/* ==========================================
+   EMERGENCY ICON
+========================================== */
+
+.emergency-item-icon {
+  width: 42px;
+  height: 42px;
+
+  flex-shrink: 0;
+
+  border-radius: 11px;
+
+  background: #fef2f2;
+  color: #dc2626;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* ==========================================
+   CONTENT
+========================================== */
+
+.emergency-content {
+  flex: 1;
+
+  min-width: 0;
+}
+
+
+.emergency-content-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  flex-wrap: wrap;
+}
+
+
+.emergency-content-title strong {
+  color: #111827;
+
+  font-size: 14px;
+}
+
+
+.active-badge {
+  padding: 3px 7px;
+
+  border-radius: 999px;
+
+  background: #fee2e2;
+  color: #dc2626;
+
+  font-size: 8px;
+  font-weight: 800;
+
+  letter-spacing: 0.6px;
+}
+
+
+.emergency-content > p {
+  margin: 6px 0 9px;
+
+  color: #6b7280;
+
+  font-size: 12px;
+  line-height: 1.5;
+
+  word-break: break-word;
+}
+
+
+/* ==========================================
+   META
+========================================== */
+
+.emergency-meta {
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 8px 14px;
+}
+
+
+.emergency-meta span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  color: #8b95a5;
+
+  font-size: 10px;
+}
+
+
+.emergency-meta span:first-child {
+  padding: 4px 7px;
+
+  border-radius: 5px;
+
+  background: #f3f4f6;
+
+  color: #4b5563;
+
+  font-weight: 600;
+}
+
+
+/* ==========================================
+   RESOLVE BUTTON
+========================================== */
+
+.resolve-emergency-button {
+  flex-shrink: 0;
+
+  border: 1px solid #bbf7d0;
+  border-radius: 8px;
+
+  background: #f0fdf4;
+  color: #15803d;
+
+  padding: 8px 11px;
+
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+
+.resolve-emergency-button:hover {
+  background: #dcfce7;
+}
+
+
+.resolve-emergency-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 850px) {
+
+  .emergencies-page {
+    padding: 22px;
+  }
+
+
+  .emergencies-header {
+    align-items: flex-start;
+  }
+
+
+  .emergency-form {
+    grid-template-columns: 1fr;
+  }
+
+
+  .emergency-field.full {
+    grid-column: auto;
+  }
+
+
+  .emergency-form-actions {
+    grid-column: auto;
+  }
+
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+  .emergencies-page {
+    padding: 15px;
+  }
+
+
+  .emergencies-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+
+  .emergencies-title {
+    align-items: flex-start;
+  }
+
+
+  .emergency-title-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+
+  .emergencies-title h1 {
+    font-size: 23px;
+  }
+
+
+  .emergency-header-actions {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+  }
+
+
+  .refresh-emergency-button,
+  .create-emergency-button {
+    width: 100%;
+  }
+
+
+  .emergency-form-card {
+    padding: 17px;
+  }
+
+
+  .emergency-list-heading {
+    padding: 17px;
+
+    align-items: flex-start;
+  }
+
+
+  .emergency-count {
+    min-width: 70px;
+  }
+
+
+  .emergency-item {
+    padding: 16px 17px;
+
+    flex-wrap: wrap;
+  }
+
+
+  .emergency-content {
+    width: calc(100% - 55px);
+
+    flex: none;
+  }
+
+
+  .resolve-emergency-button {
+    margin-left: 55px;
+  }
+
+
+  .emergency-form-actions {
+    flex-direction: column-reverse;
+  }
+
+
+  .emergency-cancel,
+  .emergency-save {
+    width: 100%;
+  }
+
+}
+
+
+@media (max-width: 420px) {
+
+  .emergency-header-actions {
+    grid-template-columns: 1fr;
+  }
+
+
+  .emergency-meta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+}

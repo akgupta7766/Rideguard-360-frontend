@@ -1,0 +1,224 @@
+.parents-page {
+  min-height: 100vh;
+  background: #f5f9fc;
+  color: #0b1f3a;
+  padding: 32px;
+}
+
+.parents-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.parents-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.parent-back-button {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #dce5ee;
+  background: white;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.parents-title-icon {
+  width: 46px;
+  height: 46px;
+  background: #1976d2;
+  color: white;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.parent-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  color: #1976d2;
+  letter-spacing: 1px;
+}
+
+.parents-title h1 {
+  margin: 2px 0;
+  font-size: 28px;
+}
+
+.parents-title p {
+  color: #5f6b7a;
+}
+
+.add-parent-button,
+.parent-save-button {
+  border: none;
+  background: #1976d2;
+  color: white;
+  padding: 11px 16px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.parents-error {
+  background: #fee2e2;
+  color: #b91c1c;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 18px;
+}
+
+.parent-form-card,
+.parent-list-card {
+  background: white;
+  border: 1px solid #dce5ee;
+  border-radius: 14px;
+  padding: 22px;
+  margin-bottom: 20px;
+}
+
+.parent-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.parent-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.parent-field label {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.parent-field input,
+.parent-field select {
+  padding: 11px 12px;
+  border: 1px solid #dce5ee;
+  border-radius: 8px;
+  background: white;
+}
+
+.parent-form-actions {
+  display: flex;
+  gap: 10px;
+  align-items: end;
+}
+
+.parent-cancel-button {
+  padding: 11px 16px;
+  border: 1px solid #dce5ee;
+  background: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.parent-list-heading p {
+  color: #5f6b7a;
+  font-size: 13px;
+}
+
+.parent-table-wrapper {
+  overflow-x: auto;
+  margin-top: 18px;
+}
+
+.parent-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.parent-table th,
+.parent-table td {
+  padding: 14px;
+  text-align: left;
+  border-bottom: 1px solid #edf1f5;
+}
+
+.parent-table th {
+  color: #5f6b7a;
+  font-size: 13px;
+}
+
+.parent-status {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  text-transform: capitalize;
+}
+
+.parent-status.active {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.parent-status.inactive {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.parent-actions {
+  display: flex;
+  gap: 7px;
+}
+
+.parent-edit-button,
+.parent-delete-button {
+  width: 34px;
+  height: 34px;
+  border-radius: 7px;
+  border: 1px solid #dce5ee;
+  background: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.parent-edit-button {
+  color: #1976d2;
+}
+
+.parent-delete-button {
+  color: #dc2626;
+}
+
+.parent-empty {
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #8a96a6;
+  gap: 8px;
+}
+
+@media (max-width: 700px) {
+  .parents-page {
+    padding: 16px;
+  }
+
+  .parents-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .parent-form {
+    grid-template-columns: 1fr;
+  }
+}

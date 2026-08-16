@@ -1,0 +1,633 @@
+/* ==========================================
+   BUSES PAGE
+========================================== */
+
+.buses-page {
+  min-height: 100vh;
+  background: #f5f7fb;
+  color: #172033;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.buses-header {
+  max-width: 1200px;
+  margin: 0 auto 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.buses-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.back-button {
+  width: 40px;
+  height: 40px;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+
+  background: #fff;
+  color: #374151;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+.back-button:hover {
+  background: #f3f4f6;
+}
+
+.buses-title-icon {
+  width: 48px;
+  height: 48px;
+
+  border-radius: 13px;
+
+  background: #eff6ff;
+  color: #2563eb;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-eyebrow {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #2563eb;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+.buses-title h1 {
+  margin: 0;
+
+  font-size: 27px;
+  line-height: 1.2;
+}
+
+.buses-title p {
+  margin: 5px 0 0;
+
+  color: #6b7280;
+
+  font-size: 13px;
+}
+
+
+/* ==========================================
+   ADD BUTTON
+========================================== */
+
+.add-bus-button {
+  border: none;
+  border-radius: 10px;
+
+  padding: 11px 17px;
+
+  background: #2563eb;
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.add-bus-button:hover {
+  background: #1d4ed8;
+}
+
+
+/* ==========================================
+   ERROR
+========================================== */
+
+.buses-error {
+  max-width: 1200px;
+  margin: 0 auto 18px;
+
+  padding: 12px 15px;
+
+  background: #fef2f2;
+  color: #b91c1c;
+
+  border: 1px solid #fecaca;
+  border-radius: 10px;
+
+  font-size: 13px;
+}
+
+
+/* ==========================================
+   COMMON CARDS
+========================================== */
+
+.bus-form-card,
+.bus-list-card {
+  max-width: 1200px;
+
+  margin: 0 auto 20px;
+
+  padding: 24px;
+
+  box-sizing: border-box;
+
+  background: #fff;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 17px;
+}
+
+
+/* ==========================================
+   FORM HEADING
+========================================== */
+
+.form-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-heading h2 {
+  margin: 0;
+
+  font-size: 19px;
+}
+
+.form-heading p {
+  margin: 5px 0 0;
+
+  color: #6b7280;
+
+  font-size: 12px;
+}
+
+
+/* ==========================================
+   FORM
+========================================== */
+
+.bus-form {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 17px;
+
+  margin-top: 20px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.form-field label {
+  color: #374151;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.form-field input,
+.form-field select {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 11px 12px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 9px;
+
+  background: #fff;
+  color: #111827;
+
+  font-family: inherit;
+  font-size: 13px;
+
+  outline: none;
+}
+
+.form-field input:focus,
+.form-field select:focus {
+  border-color: #2563eb;
+
+  box-shadow:
+    0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+
+/* ==========================================
+   FORM ACTIONS
+========================================== */
+
+.form-actions {
+  grid-column: 1 / -1;
+
+  display: flex;
+
+  justify-content: flex-end;
+  align-items: center;
+
+  gap: 10px;
+
+  padding-top: 3px;
+}
+
+.cancel-button {
+  padding: 10px 16px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 9px;
+
+  background: #fff;
+  color: #374151;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.cancel-button:hover {
+  background: #f3f4f6;
+}
+
+.save-button {
+  padding: 10px 17px;
+
+  border: none;
+  border-radius: 9px;
+
+  background: #2563eb;
+  color: #fff;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.save-button:hover {
+  background: #1d4ed8;
+}
+
+
+/* ==========================================
+   LIST HEADING
+========================================== */
+
+.list-heading {
+  margin-bottom: 20px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+.list-heading h2 {
+  margin: 0;
+
+  font-size: 19px;
+}
+
+.list-heading p {
+  margin: 5px 0 0;
+
+  color: #6b7280;
+
+  font-size: 12px;
+}
+
+
+/* ==========================================
+   TABLE
+========================================== */
+
+.bus-table-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+}
+
+.bus-table {
+  width: 100%;
+
+  min-width: 750px;
+
+  border-collapse: collapse;
+
+  font-size: 13px;
+}
+
+.bus-table thead {
+  background: #f8fafc;
+}
+
+.bus-table th {
+  padding: 13px 15px;
+
+  text-align: left;
+
+  color: #64748b;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.5px;
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.bus-table td {
+  padding: 14px 15px;
+
+  color: #475569;
+
+  border-bottom: 1px solid #eef2f6;
+}
+
+.bus-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.bus-table tbody tr:hover {
+  background: #f8fbff;
+}
+
+.bus-table td strong {
+  color: #111827;
+
+  font-weight: 700;
+}
+
+
+/* ==========================================
+   STATUS
+========================================== */
+
+.bus-status {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 5px 9px;
+
+  border-radius: 999px;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  text-transform: capitalize;
+}
+
+.bus-status.active {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.bus-status.inactive {
+  background: #f1f5f9;
+  color: #64748b;
+}
+
+.bus-status.maintenance {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+
+/* ==========================================
+   TABLE ACTIONS
+========================================== */
+
+.table-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+}
+
+.edit-button,
+.delete-button {
+  width: 34px;
+  height: 34px;
+
+  border-radius: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+.edit-button {
+  border: 1px solid #bfdbfe;
+
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.edit-button:hover {
+  background: #dbeafe;
+}
+
+.delete-button {
+  border: 1px solid #fecaca;
+
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.delete-button:hover {
+  background: #fee2e2;
+}
+
+
+/* ==========================================
+   EMPTY STATE
+========================================== */
+
+.bus-empty {
+  min-height: 200px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  color: #94a3b8;
+
+  gap: 7px;
+}
+
+.bus-empty svg {
+  color: #94a3b8;
+}
+
+.bus-empty h3 {
+  margin: 7px 0 0;
+
+  color: #374151;
+
+  font-size: 15px;
+}
+
+.bus-empty p {
+  margin: 0;
+
+  color: #9ca3af;
+
+  font-size: 12px;
+}
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 800px) {
+
+  .buses-page {
+    padding: 20px;
+  }
+
+  .bus-form {
+    grid-template-columns: 1fr;
+  }
+
+  .form-actions {
+    grid-column: auto;
+  }
+
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+  .buses-page {
+    padding: 15px;
+  }
+
+  .buses-header {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 16px;
+  }
+
+  .buses-title {
+    align-items: flex-start;
+  }
+
+  .buses-title-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .buses-title h1 {
+    font-size: 22px;
+  }
+
+  .buses-title p {
+    font-size: 12px;
+  }
+
+  .add-bus-button {
+    width: 100%;
+  }
+
+  .bus-form-card,
+  .bus-list-card {
+    padding: 17px;
+
+    border-radius: 14px;
+  }
+
+  .form-actions {
+    flex-direction: column-reverse;
+
+    align-items: stretch;
+  }
+
+  .cancel-button,
+  .save-button {
+    width: 100%;
+  }
+
+  .bus-table-wrapper {
+    margin-top: 5px;
+  }
+
+}
+
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 400px) {
+
+  .buses-title h1 {
+    font-size: 20px;
+  }
+
+  .buses-title-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .bus-form-card,
+  .bus-list-card {
+    padding: 14px;
+  }
+
+}

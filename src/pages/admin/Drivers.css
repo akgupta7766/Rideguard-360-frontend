@@ -1,0 +1,666 @@
+/* ==========================================
+   DRIVERS PAGE
+========================================== */
+
+.drivers-page {
+  min-height: 100vh;
+  padding: 30px;
+  box-sizing: border-box;
+
+  background: #f5f7fb;
+  color: #172033;
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.drivers-header {
+  max-width: 1200px;
+  margin: 0 auto 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.drivers-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.back-button {
+  width: 40px;
+  height: 40px;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 9px;
+
+  background: #ffffff;
+  color: #475569;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.back-button:hover {
+  background: #f1f5f9;
+}
+
+.drivers-title-icon {
+  width: 48px;
+  height: 48px;
+
+  border-radius: 12px;
+
+  background: #eff6ff;
+  color: #2563eb;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-eyebrow {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #2563eb;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+.drivers-title h1 {
+  margin: 0;
+
+  font-size: 27px;
+  line-height: 1.2;
+}
+
+.drivers-title p {
+  margin: 5px 0 0;
+
+  color: #64748b;
+
+  font-size: 13px;
+}
+
+
+/* ==========================================
+   ADD DRIVER BUTTON
+========================================== */
+
+.add-driver-button {
+  border: none;
+  border-radius: 9px;
+
+  padding: 11px 17px;
+
+  background: #2563eb;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.add-driver-button:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+
+/* ==========================================
+   ERROR
+========================================== */
+
+.drivers-error {
+  max-width: 1200px;
+
+  margin: 0 auto 18px;
+
+  padding: 12px 15px;
+
+  border: 1px solid #fecaca;
+  border-radius: 9px;
+
+  background: #fef2f2;
+  color: #b91c1c;
+
+  font-size: 13px;
+}
+
+
+/* ==========================================
+   CARDS
+========================================== */
+
+.driver-form-card,
+.driver-list-card {
+  max-width: 1200px;
+
+  margin: 0 auto 20px;
+
+  padding: 24px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 15px;
+
+  box-shadow:
+    0 2px 8px rgba(15, 23, 42, 0.03);
+}
+
+
+/* ==========================================
+   FORM HEADING
+========================================== */
+
+.form-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-heading h2 {
+  margin: 0;
+
+  font-size: 19px;
+}
+
+.form-heading p {
+  margin: 5px 0 0;
+
+  color: #64748b;
+
+  font-size: 12px;
+}
+
+
+/* ==========================================
+   FORM
+========================================== */
+
+.driver-form {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 17px;
+
+  margin-top: 20px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.form-field label {
+  color: #374151;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.form-field input,
+.form-field select {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 11px 12px;
+
+  border: 1px solid #d1d5db;
+
+  border-radius: 9px;
+
+  background: #ffffff;
+
+  color: #111827;
+
+  font-family: inherit;
+  font-size: 13px;
+
+  outline: none;
+
+  transition: 0.2s ease;
+}
+
+.form-field input::placeholder {
+  color: #9ca3af;
+}
+
+.form-field input:focus,
+.form-field select:focus {
+  border-color: #2563eb;
+
+  box-shadow:
+    0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+
+/* ==========================================
+   FORM ACTIONS
+========================================== */
+
+.form-actions {
+  grid-column: 1 / -1;
+
+  display: flex;
+
+  justify-content: flex-end;
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 2px;
+}
+
+.cancel-button,
+.save-button {
+  padding: 10px 17px;
+
+  border-radius: 8px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.cancel-button {
+  border: 1px solid #d1d5db;
+
+  background: #ffffff;
+
+  color: #475569;
+}
+
+.cancel-button:hover {
+  background: #f8fafc;
+}
+
+.save-button {
+  border: none;
+
+  background: #2563eb;
+
+  color: #ffffff;
+}
+
+.save-button:hover {
+  background: #1d4ed8;
+}
+
+
+/* ==========================================
+   LIST HEADING
+========================================== */
+
+.list-heading {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 18px;
+}
+
+.list-heading h2 {
+  margin: 0;
+
+  font-size: 19px;
+}
+
+.list-heading p {
+  margin: 5px 0 0;
+
+  color: #64748b;
+
+  font-size: 12px;
+}
+
+
+/* ==========================================
+   TABLE
+========================================== */
+
+.driver-table-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 11px;
+}
+
+.driver-table {
+  width: 100%;
+
+  min-width: 760px;
+
+  border-collapse: collapse;
+
+  font-size: 13px;
+}
+
+.driver-table thead {
+  background: #f8fafc;
+}
+
+.driver-table th {
+  padding: 13px 15px;
+
+  text-align: left;
+
+  border-bottom: 1px solid #e5e7eb;
+
+  color: #64748b;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.5px;
+}
+
+.driver-table td {
+  padding: 14px 15px;
+
+  border-bottom: 1px solid #eef2f6;
+
+  color: #475569;
+
+  vertical-align: middle;
+}
+
+.driver-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.driver-table tbody tr {
+  transition: 0.15s ease;
+}
+
+.driver-table tbody tr:hover {
+  background: #f8fbff;
+}
+
+.driver-table td strong {
+  color: #111827;
+
+  font-weight: 700;
+}
+
+
+/* ==========================================
+   DRIVER STATUS
+========================================== */
+
+.driver-status {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 5px 10px;
+
+  border-radius: 999px;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  text-transform: capitalize;
+}
+
+.driver-status.active {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.driver-status.inactive {
+  background: #f1f5f9;
+  color: #64748b;
+}
+
+.driver-status.maintenance {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+
+/* ==========================================
+   TABLE ACTIONS
+========================================== */
+
+.table-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+}
+
+.edit-button,
+.delete-button {
+  width: 34px;
+  height: 34px;
+
+  border-radius: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.edit-button {
+  border: 1px solid #bfdbfe;
+
+  background: #eff6ff;
+
+  color: #2563eb;
+}
+
+.edit-button:hover {
+  background: #dbeafe;
+
+  transform: translateY(-1px);
+}
+
+.delete-button {
+  border: 1px solid #fecaca;
+
+  background: #fef2f2;
+
+  color: #dc2626;
+}
+
+.delete-button:hover {
+  background: #fee2e2;
+
+  transform: translateY(-1px);
+}
+
+
+/* ==========================================
+   EMPTY / LOADING
+========================================== */
+
+.driver-empty {
+  min-height: 210px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  text-align: center;
+
+  color: #94a3b8;
+}
+
+.driver-empty svg {
+  color: #94a3b8;
+
+  margin-bottom: 5px;
+}
+
+.driver-empty h3 {
+  margin: 5px 0 0;
+
+  color: #374151;
+
+  font-size: 15px;
+}
+
+.driver-empty p {
+  margin: 0;
+
+  color: #94a3b8;
+
+  font-size: 12px;
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 800px) {
+
+  .drivers-page {
+    padding: 20px;
+  }
+
+  .drivers-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 16px;
+  }
+
+  .add-driver-button {
+    width: 100%;
+
+    justify-content: center;
+  }
+
+  .driver-form {
+    grid-template-columns: 1fr;
+  }
+
+  .form-actions {
+    grid-column: auto;
+  }
+
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+  .drivers-page {
+    padding: 15px;
+  }
+
+  .drivers-title {
+    align-items: flex-start;
+  }
+
+  .drivers-title-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .drivers-title h1 {
+    font-size: 22px;
+  }
+
+  .drivers-title p {
+    font-size: 12px;
+  }
+
+  .driver-form-card,
+  .driver-list-card {
+    padding: 17px;
+
+    border-radius: 13px;
+  }
+
+  .form-actions {
+    flex-direction: column-reverse;
+
+    align-items: stretch;
+  }
+
+  .cancel-button,
+  .save-button {
+    width: 100%;
+  }
+
+}
+
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 400px) {
+
+  .drivers-title h1 {
+    font-size: 20px;
+  }
+
+  .drivers-title-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .driver-form-card,
+  .driver-list-card {
+    padding: 14px;
+  }
+
+}
