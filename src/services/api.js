@@ -96,6 +96,20 @@ export async function getBuses() {
 }
 
 
+// ==========================================
+// GPS
+// ==========================================
+
+export async function getBusGpsLocation(busId) {
+  return apiRequest(
+    `/api/gps/bus/${encodeURIComponent(busId)}`,
+    {
+      method: "GET",
+    }
+  );
+}
+
+
 export async function createBus(busData) {
   return apiRequest(
     "/api/buses/",

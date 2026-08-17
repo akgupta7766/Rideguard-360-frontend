@@ -21,6 +21,7 @@ import {
   getRoutes,
   getActiveEmergencies,
   getNotifications,
+  getBusGpsLocation,
   markNotificationAsRead,
 } from "../../services/api";
 
@@ -33,10 +34,38 @@ import {
   Marker,
   Popup,
   Polyline,
+  useMap,
 } from "react-leaflet";
 
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
+
+
+const parentBusIcon = L.divIcon({
+  className: "custom-bus-marker",
+  html: '<div class="bus-marker">🚌</div>',
+  iconSize: [42, 42],
+  iconAnchor: [21, 21],
+});
+
+
+function ParentBusMarker({ location }) {
+  const map = useMap();
+  const position = [Number(location.latitude), Number(location.longitude)];
+
+  useEffect(() => {
+    map.panTo(position, { animate: true, duration: 0.8 });
+  }, [location.latitude, location.longitude, map]);
+
+  return (
+    <Marker position={position} icon={parentBusIcon}>
+      <Popup>
+        Live bus location<br />
+        {Number(location.latitude).toFixed(5)}, {Number(location.longitude).toFixed(5)}
+      </Popup>
+    </Marker>
+  );
+}
 
 
 function ParentDashboard() {
@@ -54,6 +83,7 @@ function ParentDashboard() {
   const [routes, setRoutes] = useState([]);
   const [emergencies, setEmergencies] = useState([]);
   const [notifications, setNotifications] = useState([]);
+  const [busLocation, setBusLocation] = useState(null);
 
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
@@ -232,6 +262,37 @@ function ParentDashboard() {
       ) || null,
     [routes, activeTrip]
   );
+
+
+  // Keep the parent view in sync with the active bus. REST polling is also
+  // used as a fallback for browsers or networks that drop WebSockets.
+  useEffect(() => {
+    if (!activeTrip?.bus_id) {
+      setBusLocation(null);
+      return undefined;
+    }
+
+    let active = true;
+
+    const refreshLocation = async () => {
+      try {
+        const location = await getBusGpsLocation(activeTrip.bus_id);
+        if (active) {
+          setBusLocation(location);
+        }
+      } catch (err) {
+        console.warn("Parent GPS refresh failed:", err);
+      }
+    };
+
+    refreshLocation();
+    const timer = window.setInterval(refreshLocation, 2000);
+
+    return () => {
+      active = false;
+      window.clearInterval(timer);
+    };
+  }, [activeTrip?.bus_id]);
 
 
   // ==========================================
@@ -804,21 +865,29 @@ function ParentDashboard() {
               </div>
 
 
-              <div className="live-map-placeholder">
-
-                <MapPin size={36} />
-
-                <strong>
-                  Live GPS Map
-                </strong>
-
-                <span>
-                  GPS location will appear
-                  here when the bus tracking
-                  system is connected.
-                </span>
-
-              </div>
+              {busLocation ? (
+                <MapContainer
+                  center={[
+                    Number(busLocation.latitude),
+                    Number(busLocation.longitude),
+                  ]}
+                  zoom={15}
+                  scrollWheelZoom={true}
+                  className="parent-live-map"
+                >
+                  <TileLayer
+                    attribution="&copy; OpenStreetMap contributors"
+                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                  />
+                  <ParentBusMarker location={busLocation} />
+                </MapContainer>
+              ) : (
+                <div className="live-map-placeholder">
+                  <MapPin size={36} />
+                  <strong>Waiting for live GPS</strong>
+                  <span>The bus location will appear here shortly.</span>
+                </div>
+              )}
 
             </div>
 
